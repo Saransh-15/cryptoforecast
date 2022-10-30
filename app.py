@@ -28,8 +28,6 @@ It is a digital medium of exchange that is encrypted and decentralized.
 Many people use cryptocurrencies as a form of investing because it gives great returns even in a short period. 
 Bitcoin, Ethereum, Dogecoin & many more coins are among the popular cryptocurrencies today.
 """)
-coins = Image.open("coins.jpg")
-st.image(coins)
 a = st.write("### Select the crpytocurrency for prediction")
 selected_stock= st.selectbox(" Select " ,
                             ("XRP-USD","BTC-USD","ETH-USD","DOGE-USD","ADA-USD",
@@ -46,27 +44,6 @@ data = data_load(selected_stock)
 data_load_state.text("loading data... done")
 
 #data
-st.subheader("Historical Data")
-time_period = st.selectbox("TIME PERIOD",("5 DAYS","15 DAYS","1 MONTH","3 MONTHS","6 MONTHS","1 YEAR"))  
-if time_period == "5 DAYS" :
-    st.write("Historical Data of past 5 Days")
-    st.write(data.tail(5))
-elif time_period == "15 DAYS" :
-     st.write("Historical Data of past 15 Days")
-     st.write(data.tail(15))  
-elif time_period == "1 MONTH" :
-     st.write("Historical Data of past 1 Month")
-     st.write(data.tail(30))  
-elif time_period == "3 MONTHS" :
-      st.write("Historical Data of past 3 Months")
-      st.write(data.tail(90))
-elif time_period == "6 MONTHS" : 
-      st.write("Historical Data of past 6 Months")
-      st.write(data.tail(180))
-elif time_period == "1 YEAR" :
-       st.write("Historical Data of past 1 year")
-       st.write(data.tail(365))   
-else :
        st.write("Historical Data of past 10 Days")
        st.write(data.tail(10))
 
