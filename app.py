@@ -171,8 +171,6 @@ df_future = pd.DataFrame(columns=['Date','Forecast'])
 df_future['Date'] = pd.date_range(start=end_date, periods=n_forecast)
 df_future['Forecast'] = Y_.flatten()
 st.subheader("Forecast for next 1 month :")
-forecast = Image.open("forecast.jpg")
-st.image(forecast)
 st.write(df_future)
 
 st.caption("Created by Saransh Yadav")
