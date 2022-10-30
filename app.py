@@ -44,8 +44,8 @@ data = data_load(selected_stock)
 data_load_state.text("loading data... done")
 
 #data
-       st.write("Historical Data of past 10 Days")
-       st.write(data.tail(10))
+st.write("Historical Data of past 10 Days")       
+st.write(data.tail(10))
 
 #Describing data
 st.subheader("Data Description of past 5 years :")
