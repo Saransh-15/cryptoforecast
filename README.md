@@ -1,1 +1,1 @@
-# cryptoforecast
+# cryptof
